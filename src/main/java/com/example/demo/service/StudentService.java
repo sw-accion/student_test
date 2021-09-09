@@ -27,6 +27,7 @@ public class StudentService {
 	public Student update (Student std) {
 		Optional<Student> student = studentRepo.findById (std.getId ());
 		Student student1 = student.get ();
+            	System.out.println(student1);
 		Student student2 = Student.builder ()
 			.studentAge (student1.getStudentAge ())
 			.studentName (student1.getStudentName ())
